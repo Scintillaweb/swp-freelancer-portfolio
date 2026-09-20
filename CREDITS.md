@@ -90,6 +90,7 @@ no icon-library dependency.
 | Signature mark | `src/components/art/Signature.astro` |
 | Client wordmarks | `src/data/clients.ts` (inline SVG, fictional companies) |
 | Monogram, favicon, app icons, OG image | `public/favicon.svg`, `public/apple-touch-icon.png`, `public/icon-192.png`, `public/icon-512.png`, `public/og-default.png` |
+| README preview screenshot | `public/preview.png` (a render of this theme) |
 
 All of it is MIT along with the rest of the theme: use it, change it, ship it.
 

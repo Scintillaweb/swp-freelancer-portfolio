@@ -5,7 +5,7 @@ and small studios. Case studies, services, a journal, testimonials and an FAQ â€
 built as static HTML with a few kilobytes of vanilla JavaScript and no UI
 framework.
 
-![Space Grotesk and Inter Tight on a lime, ink and off-white palette](public/og-default.png)
+![The theme's homepage: a large Space Grotesk name, a portrait card with an availability badge, and a client logo strip, on a lime, ink and off-white palette](public/preview.png)
 
 ## Demo
 
