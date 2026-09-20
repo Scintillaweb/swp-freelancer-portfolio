@@ -1,0 +1,39 @@
+{
+  "name": "swp-freelancer-portfolio",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "SWP Freelancer Portfolio — a fast, accessible Astro portfolio theme for freelance art directors, designers and small studios.",
+  "license": "MIT",
+  "keywords": [
+    "astro",
+    "astro-theme",
+    "astro-template",
+    "portfolio",
+    "freelance",
+    "designer",
+    "blog",
+    "withastro"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "sync": "astro sync",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.3"
+  }
+}
