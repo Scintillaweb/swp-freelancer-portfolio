@@ -679,7 +679,7 @@
 .work-body h3 { font-size: 20px; letter-spacing: -0.024em; }
 .work-body span { font-size: 13.4px; color: var(--swp-slate); display: block; margin-top: 6px; }
 
-.work-go {
+.work-body .work-go {
   width: 42px;
   height: 42px;
   border-radius: 50%;

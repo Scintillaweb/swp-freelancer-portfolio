@@ -71,7 +71,7 @@ Five dependencies in total. Nothing else is installed.
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/swp-freelancer-portfolio.git
+git clone https://github.com/Scintillaweb/swp-freelancer-portfolio.git
 cd swp-freelancer-portfolio
 npm install
 ```
