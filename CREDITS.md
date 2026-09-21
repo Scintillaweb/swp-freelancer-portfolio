@@ -10,8 +10,13 @@ Everything bundled from elsewhere is listed below with its own licence.
 
 ## Photographs
 
-All twelve photographs in `public/images/` come from
-[Pxhere](https://pxhere.com/). Pxhere's
+Thirteen of the fifteen files in `public/images/` are photographs, and all
+thirteen are CC0. Eleven come from Pxhere and two from StockSnap. The other
+two files are the brand logos, covered further down.
+
+### Pxhere (11 photographs)
+
+[Pxhere](https://pxhere.com/)'s
 [licence page](https://pxhere.com/en/license) states that every photo on the
 site is released under the
 [Creative Commons Zero (CC0) licence](https://creativecommons.org/publicdomain/zero/1.0/):
@@ -28,7 +33,6 @@ cropped to the aspect ratio the layout needs and re-encoded as WebP.
 | File | Used for | Source |
 | --- | --- | --- |
 | `public/images/hero-portrait.webp` | Hero portrait card | [pxhere.com/en/photo/868205](https://pxhere.com/en/photo/868205) |
-| `public/images/about-studio.webp` | About section / About page | [pxhere.com/en/photo/764675](https://pxhere.com/en/photo/764675) |
 | `public/images/reel-poster.webp` | Studio reel poster frame; journal post cover | [pxhere.com/en/photo/764428](https://pxhere.com/en/photo/764428) |
 | `public/images/project-console.webp` | Case study: Brightsill console | [pxhere.com/en/photo/758989](https://pxhere.com/en/photo/758989) |
 | `public/images/project-site.webp` | Case study: Coalfield site; journal post cover | [pxhere.com/en/photo/1338927](https://pxhere.com/en/photo/1338927) |
@@ -39,6 +43,36 @@ cropped to the aspect ratio the layout needs and re-encoded as WebP.
 | `public/images/journal-01.webp` | Journal post cover | [pxhere.com/en/photo/7630](https://pxhere.com/en/photo/7630) |
 | `public/images/journal-02.webp` | Journal post cover | [pxhere.com/en/photo/1338928](https://pxhere.com/en/photo/1338928) |
 | `public/images/journal-03.webp` | Journal post cover | [pxhere.com/en/photo/559565](https://pxhere.com/en/photo/559565) |
+
+### StockSnap (2 photographs)
+
+[StockSnap](https://stocksnap.io/)'s [licence page](https://stocksnap.io/license)
+states that every image on the site is released under CC0:
+
+> [You] can put StockSnap CC0 images to any of these usages without buying the
+> right to do it, acquiring written permission from the image's creator, or
+> attributing the work to the image creator.
+
+Both were contributed by the photographer **directmedia**.
+
+| File | Used for | Source |
+| --- | --- | --- |
+| `public/images/about-team.webp` | About section, main photograph | [stocksnap.io/photo/business-people-HXDODYZKFS](https://stocksnap.io/photo/business-people-HXDODYZKFS) |
+| `public/images/about-meeting.webp` | About section, inset photograph | [stocksnap.io/photo/business-people-HWLNQD65VR](https://stocksnap.io/photo/business-people-HWLNQD65VR) |
+
+Both were cropped and re-encoded as WebP for this theme.
+
+## Brand logos
+
+`public/images/header-logo.webp` and `public/images/footer-logo.webp` are the
+demo brand's own marks, supplied by the theme author. They are **not** covered
+by the MIT grant over the rest of the theme — a logo is a trademark, and the
+MIT licence does not transfer one.
+
+If you are using this theme for your own site, replace both files with your own
+logo and update `logo` in `src/config/site.ts`. See *Logo and favicon* in the
+README.
+
 If you keep the demo photographs, nothing is required of you. If you replace
 them — which you should, for a real portfolio — delete the rows above and
 record whatever your own images need.
@@ -47,10 +81,10 @@ record whatever your own images need.
 > to its CC0 release: *"identifiable people may not appear in a bad light or in
 > a way that they may find offensive, unless they give their consent."*
 >
-> Four of the twelve images show identifiable people. The demo content presents
-> them as a fictional portfolio owner and fictional clients, in a neutral,
-> professional light — which stays inside that condition. Keep it that way if
-> you keep the photographs.
+> Eight of the thirteen photographs show identifiable people. The demo content
+> presents them as a fictional portfolio owner, colleagues and clients, in a
+> neutral professional light — which stays inside that condition. Keep it that
+> way if you keep the photographs.
 >
 > Separately, CC0 waives copyright; it is not a model release. Before using a
 > photograph of an identifiable person in advertising, or in a way that implies
@@ -106,10 +140,9 @@ All of it is MIT along with the rest of the theme: use it, change it, ship it.
 
 ## Demo content
 
-Every name in the demo content is fictional: the portfolio owner (Robin Vale /
-Vale Studio), the clients (Brightsill, Tessellate, Coalfield, Petrichor,
-Saltmarsh, Undergrove, Meridian), the people quoted in the testimonials, and
-the awards. The case-study figures are illustrative, not records of real
+Every name in the demo content is fictional: the portfolio owner (Robin Vale),
+the clients (Brightsill, Tessellate, Coalfield, Petrichor, Saltmarsh,
+Undergrove, Meridian), the people quoted in the testimonials, and the awards. The case-study figures are illustrative, not records of real
 projects. The email address, phone number and postal details are placeholders.
 
 Replace all of it before you publish. `src/config/site.ts` is the place to

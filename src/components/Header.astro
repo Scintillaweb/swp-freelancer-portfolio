@@ -22,9 +22,15 @@ function target(href: string, anchor?: string) {
 
 <header class="hdr" id="top">
   <div class="wrap hdr-in">
-    <a class="brand" href="/" aria-label={`${siteConfig.name} — home`}>
-      <Icon name="logo" class="brand-mark" style="color:var(--swp-ink)" />
-      <span>{siteConfig.name}</span>
+    <a class="brand" href="/">
+      <img
+        src={siteConfig.logo.header.src}
+        alt={`${siteConfig.name} — home`}
+        width={siteConfig.logo.header.width}
+        height={siteConfig.logo.header.height}
+        fetchpriority="high"
+        decoding="async"
+      />
     </a>
 
     <nav class="nav" aria-label="Primary">

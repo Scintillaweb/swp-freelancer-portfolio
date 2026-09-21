@@ -48,11 +48,20 @@ export const about = {
     'One senior person on the work from first call to launch — nothing gets passed down.',
     'If I think the project is the wrong project, you hear it before you pay me.',
   ],
-  image: {
-    src: '/images/about-studio.webp',
-    alt: 'Designers arranging sticky notes and printed layouts across a studio table',
-    width: 900,
-    height: 954,
+  /** The About section pairs a tall main photograph with a smaller inset one. */
+  images: {
+    main: {
+      src: '/images/about-team.webp',
+      alt: 'Two colleagues standing together in a bright office, reviewing work on a tablet',
+      width: 900,
+      height: 990,
+    },
+    inset: {
+      src: '/images/about-meeting.webp',
+      alt: 'Two colleagues talking over an open laptop at a meeting table',
+      width: 620,
+      height: 465,
+    },
   },
   badge: {
     value: '15',

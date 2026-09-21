@@ -13,13 +13,19 @@ import type { SiteConfig } from '~/types';
  * back here through `import.meta.env.SITE`.
  */
 export const siteConfig: SiteConfig = {
-  name: 'Vale Studio',
+  name: 'SWP Freelancer Portfolio',
+
+  logo: {
+    header: { src: '/images/header-logo.webp', width: 164, height: 58 },
+    footer: { src: '/images/footer-logo.webp', width: 164, height: 58 },
+  },
+
   author: 'Robin Vale',
   role: 'Art direction & interface design',
-  title: 'Vale Studio — Art direction & interface design',
+  title: 'SWP Freelancer Portfolio — Art direction & interface design',
   description:
     'Portfolio of Robin Vale, an independent art director and interface designer working with small product teams on identity, interface and design systems.',
-  url: import.meta.env.SITE ?? 'https://swp-freelancer-portfolio.pages.dev',
+  url: import.meta.env.SITE ?? 'https://swp-freelancer-portfolio.vercel.app',
   ogImage: '/og-default.png',
   locale: 'en',
   themeColor: '#c8f14d',
@@ -45,7 +51,7 @@ export const siteConfig: SiteConfig = {
   about:
     'An independent art direction and design practice for teams of under twenty. Fewer clients, harder questions early, and a handover that does not quietly depend on me.',
 
-  copyrightHolder: 'Vale Studio',
+  copyrightHolder: 'SWP Freelancer Portfolio',
 };
 
 export default siteConfig;

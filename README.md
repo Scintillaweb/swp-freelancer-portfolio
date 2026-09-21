@@ -9,8 +9,9 @@ framework.
 
 ## Demo
 
-**https://your-demo-url.example.com** — *placeholder. Replace this with your own
-deployment before publishing the theme.*
+**https://swp-freelancer-portfolio.vercel.app/**
+
+Source: [github.com/Scintillaweb/swp-freelancer-portfolio](https://github.com/Scintillaweb/swp-freelancer-portfolio)
 
 ## Features
 
@@ -42,8 +43,9 @@ deployment before publishing the theme.*
 - **Self-hosted variable fonts.** Two WOFF2 files cover every weight; no request
   leaves your domain.
 - **Custom SVG throughout** — a 29-icon sprite, five pieces of project artwork,
-  a signature mark and the monogram used for the favicon and app icons. No icon
-  library.
+  a signature mark and the monogram behind the favicon and app icons. No icon
+  library. Header and footer take raster logo files, swappable in one config
+  block.
 - **SEO built in** — canonical URLs, Open Graph, Twitter cards, JSON-LD
   (`Person`, `WebSite`, `BlogPosting`, `BreadcrumbList`), a generated sitemap
   and a generated `robots.txt`.
@@ -203,10 +205,30 @@ and update the two `<link rel="preload">` tags in
 
 ### Logo and favicon
 
-The monogram is one inline SVG, defined as `#i-logo` in
-`src/components/icons/IconSprite.astro` and used by `Header.astro` and
-`Footer.astro`. `public/favicon.svg` holds the same shape. If you change it,
-regenerate `apple-touch-icon.png`, `icon-192.png` and `icon-512.png` to match.
+The header and footer each render a logo image, configured in
+`src/config/site.ts`:
+
+```ts
+logo: {
+  header: { src: '/images/header-logo.webp', width: 164, height: 58 },
+  footer: { src: '/images/footer-logo.webp', width: 164, height: 58 },
+},
+```
+
+Two files rather than one because the header sits on white and the footer on
+near-black, so they need different colourways. Drop your own into
+`public/images/`, point the config at them, and set `width`/`height` to the
+files' real pixel dimensions — the CSS controls the displayed size (38px tall
+in the header, 46px in the footer, from `.brand img` and `.ftr-brand img` in
+`src/styles/sections.css`) while the attributes hold the ratio and stop the
+header shifting as it loads.
+
+The logo carries the wordmark, so no brand text is rendered next to it;
+`siteConfig.name` becomes the image's alt text instead.
+
+Separately, `public/favicon.svg` is an inline SVG monogram, also available as
+`#i-logo` in the icon sprite. If you change it, regenerate
+`apple-touch-icon.png`, `icon-192.png` and `icon-512.png` to match.
 
 ### Navigation
 
@@ -447,16 +469,16 @@ Pages all do this automatically.
 
 ## Images
 
-The twelve photographs in `public/images/` come from
-[Pxhere](https://pxhere.com/) and are
+The thirteen photographs in `public/images/` are all
 [CC0 1.0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) —
 free to use, modify and redistribute, commercially included, with no
-attribution required. Each one is credited with its source page in
-[CREDITS.md](CREDITS.md) so you can verify it yourself.
+attribution required. Eleven come from [Pxhere](https://pxhere.com/) and two
+from [StockSnap](https://stocksnap.io/). Every one is credited with its source
+page in [CREDITS.md](CREDITS.md) so you can verify it yourself.
 
-They are stored locally and pre-optimised. Nothing is hotlinked, from Pxhere or
-anywhere else. All twelve files together come to about 450 KB, and no single
-page loads more than a few of them.
+They are stored locally and pre-optimised. Nothing is hotlinked. The folder
+also holds the two brand logo files. Everything together comes to about
+500 KB, and no single page loads more than a few of them.
 
 Every image is cropped to the aspect ratio its slot needs, re-encoded as WebP,
 carries explicit `width` and `height`, and is lazy-loaded unless it is above the
@@ -522,8 +544,8 @@ If you change the palette or the markup, re-check these.
   header state, the nav drawer, the marquee, the stat counters and the reel,
   and the work filter — each shipped only to the pages that use it. Every one
   of them is an enhancement over markup that already works.
-- One 37 KB stylesheet (8 KB gzipped), one inline icon sprite, and two font
-  files for a Latin-script visitor.
+- One ~38 KB stylesheet (8 KB gzipped), one inline icon sprite, a 3 KB logo,
+  and two font files for a Latin-script visitor.
 - Images pre-sized, WebP, dimensioned and lazy-loaded below the fold; only the
   hero portrait is `fetchpriority="high"`.
 - No third-party requests at all. No analytics, no font CDN, no embeds unless
@@ -546,8 +568,10 @@ attribution required.
 
 Bundled third-party assets keep their own licences:
 
-- **Photographs** — CC0 1.0 Public Domain (Pxhere)
+- **Photographs** — CC0 1.0 Public Domain (Pxhere, StockSnap)
 - **Space Grotesk, Inter Tight** — SIL Open Font License 1.1
+- **`header-logo.webp` / `footer-logo.webp`** — the demo brand's own marks,
+  not covered by the MIT grant. Replace them with your own logo.
 
 [CREDITS.md](CREDITS.md) has the full accounting, including per-image source
 links and the OFL texts shipped alongside the fonts.
@@ -555,7 +579,7 @@ links and the OFL texts shipped alongside the fonts.
 ## Credits
 
 - [Astro](https://astro.build) — the framework
-- [Pxhere](https://pxhere.com) — CC0 photographs
+- [Pxhere](https://pxhere.com) and [StockSnap](https://stocksnap.io) — CC0 photographs
 - [Space Grotesk](https://github.com/floriankarsten/space-grotesk) by Florian
   Karsten — display typeface
 - [Inter Tight](https://github.com/rsms/inter-tight) by Rasmus Andersson and

@@ -17,8 +17,14 @@ const year = new Date().getFullYear();
   <div class="wrap ftr-top">
     <div>
       <a class="ftr-brand" href="/">
-        <Icon name="logo" class="brand-mark" style="color:#fff" />
-        <span>{siteConfig.name}</span>
+        <img
+          src={siteConfig.logo.footer.src}
+          alt={`${siteConfig.name} — home`}
+          width={siteConfig.logo.footer.width}
+          height={siteConfig.logo.footer.height}
+          loading="lazy"
+          decoding="async"
+        />
       </a>
       <p class="ftr-about">{siteConfig.about}</p>
       <div class="ftr-soc">
@@ -64,7 +70,7 @@ const year = new Date().getFullYear();
   </div>
 
   <div class="wrap ftr-bot">
-    <p>&copy; {year} {siteConfig.copyrightHolder}. Built with SWP Freelancer Portfolio, an Astro theme.</p>
+    <p>&copy; {year} {siteConfig.copyrightHolder} &mdash; an Astro portfolio theme.</p>
     <nav aria-label="Legal">
       {footerNav.legal.map((l) => <a href={l.href}>{l.label}</a>)}
     </nav>

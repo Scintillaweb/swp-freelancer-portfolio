@@ -12,7 +12,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--swp-lime);
+  /* Beyond --shell (1920px) this is what fills the gutters, so it matches
+     the page rather than framing it in the accent colour. */
+  background: var(--swp-shell);
   color: var(--swp-ink);
   font-family: var(--font-body);
   font-size: 16px;
