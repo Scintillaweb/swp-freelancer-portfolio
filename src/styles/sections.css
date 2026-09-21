@@ -392,8 +392,12 @@
 /* Works for either a photograph or one of the bundled SVG mockups. */
 .mock img,
 .mock svg { width: 100%; height: 100%; display: block; object-fit: cover; }
-.mock-a { aspect-ratio: 3 / 4; margin-top: clamp(24px, 3.4vw, 58px); }
-.mock-b { aspect-ratio: 1 / 1; margin-bottom: clamp(24px, 3.4vw, 58px); }
+/* Same ratio in both slots so the two images match in height; the offset
+   comes from the margins, not from differing shapes. */
+.mock-a,
+.mock-b { aspect-ratio: 1 / 1; }
+.mock-a { margin-top: clamp(24px, 3.4vw, 58px); }
+.mock-b { margin-bottom: clamp(24px, 3.4vw, 58px); }
 
 .collab-badge {
   position: absolute;

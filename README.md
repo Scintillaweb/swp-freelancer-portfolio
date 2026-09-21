@@ -274,6 +274,12 @@ before. To use artwork instead of photography, drop them back into
 `.mock img` and `.mock svg` share the same sizing rules, so either works
 without touching the CSS.
 
+Both slots are `aspect-ratio: 1 / 1`, which keeps the two images the same
+height — the staggered look comes from `margin-top` on `.mock-a` and
+`margin-bottom` on `.mock-b`, not from differing shapes. Change the ratio in
+`src/styles/sections.css` if your images suit a different one; the bundled
+mockups were drawn on a 4/5 canvas.
+
 ### The other data files
 
 | File | Controls |

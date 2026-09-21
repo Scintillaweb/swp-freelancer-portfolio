@@ -46,8 +46,8 @@ export const collaborate = {
     {
       src: '/images/collab-team.webp',
       alt: 'Two colleagues standing in a bright office, reviewing work together on a tablet',
-      width: 780,
-      height: 1040,
+      width: 760,
+      height: 760,
     },
     {
       src: '/images/collab-meeting.webp',
