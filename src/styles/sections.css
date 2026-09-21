@@ -389,9 +389,11 @@
   align-items: start;
 }
 .mock { border-radius: var(--r-md); overflow: hidden; background: var(--swp-mist); }
-.mock svg { width: 100%; height: 100%; display: block; }
+/* Works for either a photograph or one of the bundled SVG mockups. */
+.mock img,
+.mock svg { width: 100%; height: 100%; display: block; object-fit: cover; }
 .mock-a { aspect-ratio: 3 / 4; margin-top: clamp(24px, 3.4vw, 58px); }
-.mock-b { aspect-ratio: 4 / 5; margin-bottom: clamp(24px, 3.4vw, 58px); }
+.mock-b { aspect-ratio: 1 / 1; margin-bottom: clamp(24px, 3.4vw, 58px); }
 
 .collab-badge {
   position: absolute;
@@ -505,60 +507,30 @@
   gap: clamp(30px, 4.4vw, 72px);
   align-items: center;
 }
-/* A tall photograph with the years badge and a smaller second photograph
-   sharing its lower edge. Both overlays sit inside the image box, so the
-   composition can never push the grid wider than its column. */
 .about-img {
   border-radius: var(--r-lg);
   overflow: hidden;
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 1 / 1.06;
   background: var(--swp-mist);
   position: relative;
 }
-.about-img > img { width: 100%; height: 100%; object-fit: cover; }
-
+.about-img img { width: 100%; height: 100%; object-fit: cover; }
 .about-badge {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
-  width: min(44%, 210px);
-  /* Nearly opaque: this panel sits over a photograph, so the label has to
-     stay readable even where backdrop-filter is unsupported. */
-  background: rgba(255, 255, 255, 0.96);
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: var(--r-md);
-  padding: 16px 18px;
-  box-shadow: 0 18px 40px -24px rgba(16, 17, 16, 0.55);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
-.about-badge b {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(24px, 2.4vw, 30px);
-  letter-spacing: -0.035em;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.about-badge span { font-size: 12.4px; color: var(--swp-slate); line-height: 1.45; }
-
-.about-img-inset {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  width: 48%;
-  aspect-ratio: 4 / 3;
-  border: 6px solid var(--swp-shell);
-  border-radius: var(--r-md);
-  overflow: hidden;
-  background: var(--swp-mist);
-  box-shadow: 0 26px 50px -28px rgba(16, 17, 16, 0.8);
-}
-.about-img-inset img { width: 100%; height: 100%; object-fit: cover; }
-
-@media (max-width: 420px) {
-  .about-badge { width: 52%; padding: 13px 14px; }
-  .about-img-inset { width: 42%; border-width: 4px; }
-}
+.about-badge b { font-family: var(--font-display); font-size: 30px; letter-spacing: -0.035em; line-height: 1; }
+.about-badge span { font-size: 13px; color: var(--swp-slate); line-height: 1.4; }
 
 .about-h { margin: 18px 0 20px; }
 .about-list { margin-top: 30px; display: grid; gap: 14px; }

@@ -16,30 +16,18 @@ const { headingLevel: Heading = 'h2', id = 'about' } = Astro.props;
 
 <section class="wrap sec" id={id} aria-labelledby="about-h">
   <div class="about-grid">
-    <div class="about-media rev">
-      <div class="about-img">
-        <img
-          src={about.images.main.src}
-          alt={about.images.main.alt}
-          width={about.images.main.width}
-          height={about.images.main.height}
-          loading="lazy"
-          decoding="async"
-        />
-        <div class="about-badge">
-          <b>{about.badge.value}</b>
-          <span>{about.badge.label}</span>
-        </div>
-        <div class="about-img-inset">
-          <img
-            src={about.images.inset.src}
-            alt={about.images.inset.alt}
-            width={about.images.inset.width}
-            height={about.images.inset.height}
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
+    <div class="about-img rev">
+      <img
+        src={about.image.src}
+        alt={about.image.alt}
+        width={about.image.width}
+        height={about.image.height}
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="about-badge">
+        <b>{about.badge.value}</b>
+        <span>{about.badge.label}</span>
       </div>
     </div>
 

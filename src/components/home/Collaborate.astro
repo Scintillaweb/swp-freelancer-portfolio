@@ -1,8 +1,6 @@
 ---
 import Icon from '../Icon.astro';
 import Button from '../Button.astro';
-import BookletMock from '../art/BookletMock.astro';
-import TabletMock from '../art/TabletMock.astro';
 import siteConfig from '~/config/site';
 import { collaborate } from '~/data/highlights';
 ---
@@ -11,8 +9,20 @@ import { collaborate } from '~/data/highlights';
   <div class="collab-grid">
     <div class="collab-visual rev">
       <div class="mocks">
-        <div class="mock mock-a"><BookletMock /></div>
-        <div class="mock mock-b"><TabletMock /></div>
+        {
+          collaborate.images.map((image, i) => (
+            <div class:list={['mock', i === 0 ? 'mock-a' : 'mock-b']}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          ))
+        }
       </div>
       <span class="collab-badge">{collaborate.badge}</span>
     </div>

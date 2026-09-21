@@ -42,10 +42,10 @@ Source: [github.com/Scintillaweb/swp-freelancer-portfolio](https://github.com/Sc
   invisible.
 - **Self-hosted variable fonts.** Two WOFF2 files cover every weight; no request
   leaves your domain.
-- **Custom SVG throughout** — a 29-icon sprite, five pieces of project artwork,
-  a signature mark and the monogram behind the favicon and app icons. No icon
-  library. Header and footer take raster logo files, swappable in one config
-  block.
+- **Custom SVG throughout** — a 29-icon sprite, three project artworks, two
+  device mockups, a signature mark and the monogram behind the favicon and app
+  icons. No icon library. Header and footer take raster logo files, swappable
+  in one config block.
 - **SEO built in** — canonical URLs, Open Graph, Twitter cards, JSON-LD
   (`Person`, `WebSite`, `BlogPosting`, `BreadcrumbList`), a generated sitemap
   and a generated `robots.txt`.
@@ -253,6 +253,26 @@ delete the ones you do not want:
 
 The copy for the one-of-a-kind sections (hero, collaborate, about, CTA and the
 section headings) lives in `src/data/highlights.ts`.
+
+#### The "Working together" visuals
+
+That section shows a staggered pair of images, set in `collaborate.images` in
+`src/data/highlights.ts`. Swap the two files, or point it at your own.
+
+The theme also ships two inline SVG device mockups — `BookletMock.astro` and
+`TabletMock.astro` in `src/components/art/` — which is what that slot used
+before. To use artwork instead of photography, drop them back into
+`src/components/home/Collaborate.astro`:
+
+```astro
+<div class="mocks">
+  <div class="mock mock-a"><BookletMock /></div>
+  <div class="mock mock-b"><TabletMock /></div>
+</div>
+```
+
+`.mock img` and `.mock svg` share the same sizing rules, so either works
+without touching the CSS.
 
 ### The other data files
 
@@ -469,16 +489,16 @@ Pages all do this automatically.
 
 ## Images
 
-The thirteen photographs in `public/images/` are all
+The fourteen photographs in `public/images/` are all
 [CC0 1.0 Public Domain](https://creativecommons.org/publicdomain/zero/1.0/) —
 free to use, modify and redistribute, commercially included, with no
-attribution required. Eleven come from [Pxhere](https://pxhere.com/) and two
+attribution required. Twelve come from [Pxhere](https://pxhere.com/) and two
 from [StockSnap](https://stocksnap.io/). Every one is credited with its source
 page in [CREDITS.md](CREDITS.md) so you can verify it yourself.
 
 They are stored locally and pre-optimised. Nothing is hotlinked. The folder
 also holds the two brand logo files. Everything together comes to about
-500 KB, and no single page loads more than a few of them.
+525 KB, and no single page loads more than a few of them.
 
 Every image is cropped to the aspect ratio its slot needs, re-encoded as WebP,
 carries explicit `width` and `height`, and is lazy-loaded unless it is above the

@@ -37,6 +37,25 @@ export const collaborate = {
   badge: 'Independent since 2011',
   ctaLabel: 'Send me the brief',
   ctaHref: '/contact/',
+  /**
+   * The staggered pair beside the copy. Swap these for the bundled SVG
+   * mockups (`BookletMock`, `TabletMock` in src/components/art/) if you would
+   * rather show artwork than photography — see the README.
+   */
+  images: [
+    {
+      src: '/images/collab-team.webp',
+      alt: 'Two colleagues standing in a bright office, reviewing work together on a tablet',
+      width: 780,
+      height: 1040,
+    },
+    {
+      src: '/images/collab-meeting.webp',
+      alt: 'Two colleagues talking over an open laptop at a meeting table',
+      width: 760,
+      height: 760,
+    },
+  ],
 };
 
 export const about = {
@@ -48,20 +67,11 @@ export const about = {
     'One senior person on the work from first call to launch — nothing gets passed down.',
     'If I think the project is the wrong project, you hear it before you pay me.',
   ],
-  /** The About section pairs a tall main photograph with a smaller inset one. */
-  images: {
-    main: {
-      src: '/images/about-team.webp',
-      alt: 'Two colleagues standing together in a bright office, reviewing work on a tablet',
-      width: 900,
-      height: 990,
-    },
-    inset: {
-      src: '/images/about-meeting.webp',
-      alt: 'Two colleagues talking over an open laptop at a meeting table',
-      width: 620,
-      height: 465,
-    },
+  image: {
+    src: '/images/about-studio.webp',
+    alt: 'Designers arranging sticky notes and printed layouts across a studio table',
+    width: 900,
+    height: 954,
   },
   badge: {
     value: '15',

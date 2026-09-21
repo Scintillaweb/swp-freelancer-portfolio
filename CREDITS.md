@@ -10,11 +10,11 @@ Everything bundled from elsewhere is listed below with its own licence.
 
 ## Photographs
 
-Thirteen of the fifteen files in `public/images/` are photographs, and all
-thirteen are CC0. Eleven come from Pxhere and two from StockSnap. The other
+Fourteen of the sixteen files in `public/images/` are photographs, and all
+fourteen are CC0. Twelve come from Pxhere and two from StockSnap. The other
 two files are the brand logos, covered further down.
 
-### Pxhere (11 photographs)
+### Pxhere (12 photographs)
 
 [Pxhere](https://pxhere.com/)'s
 [licence page](https://pxhere.com/en/license) states that every photo on the
@@ -33,6 +33,7 @@ cropped to the aspect ratio the layout needs and re-encoded as WebP.
 | File | Used for | Source |
 | --- | --- | --- |
 | `public/images/hero-portrait.webp` | Hero portrait card | [pxhere.com/en/photo/868205](https://pxhere.com/en/photo/868205) |
+| `public/images/about-studio.webp` | About (Background) section | [pxhere.com/en/photo/764675](https://pxhere.com/en/photo/764675) |
 | `public/images/reel-poster.webp` | Studio reel poster frame; journal post cover | [pxhere.com/en/photo/764428](https://pxhere.com/en/photo/764428) |
 | `public/images/project-console.webp` | Case study: Brightsill console | [pxhere.com/en/photo/758989](https://pxhere.com/en/photo/758989) |
 | `public/images/project-site.webp` | Case study: Coalfield site; journal post cover | [pxhere.com/en/photo/1338927](https://pxhere.com/en/photo/1338927) |
@@ -57,8 +58,8 @@ Both were contributed by the photographer **directmedia**.
 
 | File | Used for | Source |
 | --- | --- | --- |
-| `public/images/about-team.webp` | About section, main photograph | [stocksnap.io/photo/business-people-HXDODYZKFS](https://stocksnap.io/photo/business-people-HXDODYZKFS) |
-| `public/images/about-meeting.webp` | About section, inset photograph | [stocksnap.io/photo/business-people-HWLNQD65VR](https://stocksnap.io/photo/business-people-HWLNQD65VR) |
+| `public/images/collab-team.webp` | "Working together" section, left image | [stocksnap.io/photo/business-people-HXDODYZKFS](https://stocksnap.io/photo/business-people-HXDODYZKFS) |
+| `public/images/collab-meeting.webp` | "Working together" section, right image | [stocksnap.io/photo/business-people-HWLNQD65VR](https://stocksnap.io/photo/business-people-HWLNQD65VR) |
 
 Both were cropped and re-encoded as WebP for this theme.
 
@@ -81,7 +82,7 @@ record whatever your own images need.
 > to its CC0 release: *"identifiable people may not appear in a bad light or in
 > a way that they may find offensive, unless they give their consent."*
 >
-> Eight of the thirteen photographs show identifiable people. The demo content
+> Eight of the fourteen photographs show identifiable people. The demo content
 > presents them as a fictional portfolio owner, colleagues and clients, in a
 > neutral professional light — which stays inside that condition. Keep it that
 > way if you keep the photographs.
@@ -119,7 +120,7 @@ no icon-library dependency.
 | Asset | Where |
 | --- | --- |
 | 29-icon sprite | `src/components/icons/IconSprite.astro` |
-| Booklet and tablet mockups | `src/components/art/BookletMock.astro`, `TabletMock.astro` |
+| Booklet and tablet mockups (bundled, not rendered by default) | `src/components/art/BookletMock.astro`, `TabletMock.astro` |
 | Project artwork (identity, dashboard, app screens) | `src/components/art/IdentityArt.astro`, `DashboardArt.astro`, `AppScreensArt.astro` |
 | Signature mark | `src/components/art/Signature.astro` |
 | Client wordmarks | `src/data/clients.ts` (inline SVG, fictional companies) |
